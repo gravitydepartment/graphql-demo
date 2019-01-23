@@ -1,7 +1,9 @@
 
 # GraphQL Demo
 
-This demo is for GraphQL beginners who have [read the docs](https://graphql.org/learn/) and want to practice concepts. It uses [Graphpack](https://github.com/glennreyes/graphpack) to create a GraphQL server and setup the GraphQL Playground browser tool to interact with some data about movies.
+![Keanu Reeves gets it](img/demo.gif)
+
+This demo is for GraphQL beginners who have [read the docs](https://graphql.org/learn/) and want to practice concepts. It uses [Graphpack](https://github.com/glennreyes/graphpack) to create a GraphQL server and setup the GraphQL Playground browser tool to interact with some data about Keanu Reeves movies.
 
 It shows GraphQL operations:
 
@@ -29,7 +31,98 @@ npm install
 npm run dev
 ```
 
-Voila, the GraphQL demo is running at: [http://localhost:4000](http://localhost:4000)
+Voila, GraphQL Playground is running at: [http://localhost:4000](http://localhost:4000)
+
+## Example operations
+
+In GraphQL Playground, copy/paste each snippet into a new tab and press the play button to see what happens.
+
+### Get info for all movies:
+
+```
+query {
+  movies {
+  	id
+    title
+    year
+    name
+    role
+    rating {
+      source
+      value
+    }
+  }
+}
+```
+
+### Get info for a specific movie:
+
+```
+query {
+  movie (id: 3) {
+  	id
+    title
+    year
+    name
+    role
+    rating {
+      source
+      value
+    }
+  }
+}
+```
+
+### Create a movie:
+
+```
+mutation {
+  createMovie (
+    id: 5,
+    title: "John Wick",
+    year: 2014,
+    name: "John Wick",
+    role: "Retired hitman"
+  ) {
+    id
+    title
+    year
+    name
+    role
+    rating {
+      source
+      value
+    }
+  }
+}
+```
+
+### Delete a movie:
+
+```
+mutation {
+	deleteMovie (id: 5) {
+    title
+    year
+  }
+}
+```
+
+### Update a movie:
+
+```
+mutation {
+  updateMovie (
+    id: 3,
+    name: "Neo",
+    role: "The One"
+  ) {
+    title
+    name
+    role
+  }
+}
+```
 
 ## Troubleshooting
 
