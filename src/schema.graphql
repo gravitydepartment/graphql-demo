@@ -1,0 +1,28 @@
+type Query {
+    movie(id: ID!): Movie!
+    movies: [Movie!]!
+}
+
+type Movie {
+    id: ID! @doc(description: "A faux-unique ID.")
+    title: String! @doc(description: "The title of the movie.")
+    year: Int! @doc(description: "The year the movie was released.")
+    name: String! @doc(description: "The name of the character played by Keanu Reeves.")
+    role: String! @doc(description: "The role of the character played by Keanu Reeves.")
+    rating: Rating @doc(description: "")
+}
+
+type Ratings {
+    items: [Rating] @doc(description: "An array of ratings.")
+}
+
+type Rating {
+    source: String
+    value: Float
+}
+
+type Mutation {
+    createMovie(id: ID!, title: String!, year: Int!, name: String!, role: String!): Movie!
+    updateMovie(id: ID!, title: String, year: Int, name: String, role: String): Movie!
+    deleteMovie(id: ID!): Movie!
+}
