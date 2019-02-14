@@ -3,7 +3,7 @@
 
 ![Keanu Reeves gets it](img/demo.gif)
 
-This demo is for GraphQL beginners who have [read the docs](https://graphql.org/learn/) and want to practice concepts. It uses [Graphpack](https://github.com/glennreyes/graphpack) to create a GraphQL server and setup the GraphQL Playground browser tool to interact with some data about Keanu Reeves movies.
+This demo is for GraphQL beginners (who already [read the docs](https://graphql.org/learn/)) to practice concepts. It uses [Graphpack](https://github.com/glennreyes/graphpack) to create a GraphQL server and setup the GraphQL Playground browser tool to interact with some data about Keanu Reeves movies.
 
 It shows GraphQL operations:
 
