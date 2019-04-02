@@ -42,7 +42,7 @@ In GraphQL Playground, copy/paste each snippet into a new tab and press the play
 ```
 query {
   movies {
-  	id
+    id
     title
     year
     name
@@ -60,7 +60,7 @@ query {
 ```
 query {
   movie (id: 3) {
-  	id
+    id
     title
     year
     name
@@ -101,7 +101,7 @@ mutation {
 
 ```
 mutation {
-	deleteMovie (id: 5) {
+  deleteMovie (id: 5) {
     title
     year
   }
